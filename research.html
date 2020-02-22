@@ -55,8 +55,7 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<span class="date">LISA Signal Confusion Noise</span>
-									<h2>LISA</h2>
+									<h2>LISA Signal Confusion Noise</h2>
 									<p>LISA (Laser Interferometer Space Antenna) is the proposed space based gravitational wave detector. 
 									It will be able to detect gravitational waves in the low frequency range between 0.1 Hz and 1 Hz. 
 									This makes EMRIs (Extreme Mass Ratio Inspirals) a prime candidate for LISA. EMRIs occur whenever a 
@@ -66,8 +65,19 @@
 									long, it is not likely to detect a single source of EMRIs. However, an ensemble of such sources would 
 									likely make an unresolveable background noise that would be detectable by LISA. </p>
 									<div class="image main">
-										<img src="images/LISA-waves.jpg" alt>
+										<img src="images/LISA-waves.jpg">
 										<figcaption>NASA illustration of LISA, taken from http://lisa.jpl.nasa.gov/gallery/lisa-waves.html.</figcaption>
+									</div>
+									<p>This unresolveable background noise could make it very difficult to distinguish individual sources when the frequency 
+									is near the LISA noise curve. The goal of my research is to build upon Barack and Cutler 2004 and estimate populations of 
+									these EMRIs to better fit the LISA noise curve. This is being done using a Teukolsky based code developed by my research 
+									group. This code treats the stellar mass compact object as a perturbation on the orbit of the SMBH. With this in mind we 
+									are able to model the orbits for eccentricities as high as 0.9999 and are able to accurately predict where the k<sub>max</sub> 
+									is which can reside as far out as 100,000. This significantly cuts down on the computation time necessary for these orbits. 
+									To further cut down the time, we run our code through the University of Arkansas's high performance computing center.   </p>
+									<div class="image main">
+										<img src="images/LISA noise curve.png">
+										<figcaption>LISA discovery space, taken from LISA: A Modern Astrophysical Observatory - Shane Larson.</figcaption>
 									</div>
 								</header>
 
