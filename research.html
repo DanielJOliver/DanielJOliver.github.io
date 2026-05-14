@@ -6,8 +6,19 @@
 -->
 <html>
 	<head>
-		<title>Daniel Joseph Oliver</title>
+		<title>Research | Daniel J. Oliver</title>
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+		<meta name="description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspiral (EMRI) gravitational wave peeps." />
+		<meta name="author" content="Daniel J. Oliver" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Research | Daniel J. Oliver" />
+		<meta property="og:description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspiral (EMRI) gravitational wave peeps." />
+		<meta property="og:url" content="https://danieljoliver.com/research.html" />
+		<meta property="og:image" content="https://danieljoliver.com/images/Daniel_CherryBlossom.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Research | Daniel J. Oliver" />
+		<meta name="twitter:description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspiral (EMRI) gravitational wave peeps." />
+		<meta name="twitter:image" content="https://danieljoliver.com/images/Daniel_CherryBlossom.jpg" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,10 +46,10 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">About</a></li>
+							<li><a href="./">About</a></li>
 							<li class="active"><a href="research.html">Current Research</a></li>
 							<li><a href="publications.html">Publications/Presentations</a></li>
-							<li><a href="resume.html">CV</a></li>
+							<li><a href="cv.html">CV</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://orcid.org/0000-0002-7374-6925">ORCID</a></li>
@@ -52,81 +63,106 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Featured Post -->
+						<!-- Gravitational Wave Spectrum overview (clickable) -->
 						<article class="post featured">
 							<header class="major">
-								<h2>NANOGrav Pulsar Timing Arrays</h2>
-								<p>NANOGrav (North American Nanohertz Observatory for Gravitational Waves) is an international collaboration that uses 
-									pulsar timing arrays (PTAs) to detect gravitational waves. NANOGrav uses radio telescopes to observe millisecond pulsars,
-									which are highly stable rotating neutron stars. We create timing models for these pulsars to estimate their time of 
-									arrival (TOA) at the Earth, and then compare the value to observed TOA. The residuals from this difference can be used
-									for pulsar science as well as for gravitational wave detection. In June 2023, NANOGrav and other PTAs around the world 
-									announced evidence for a detection of a stochastic gravitational wave background (GWB). NANOGrav is sensitive to 
-									gravitational waves in the nanohertz frequency range between 10<sup>-10</sup> - 10<sup>-7</sup> Hz. 
+								<h2>The Gravitational Wave Spectrum</h2>
+								<p>
+								My research spans two complementary regions of the gravitational wave spectrum: the nanohertz
+								band where pulsar timing arrays like NANOGrav operate, and the millihertz band that the
+								upcoming space-based observatory LISA will probe. Click on a detector below to jump to the
+								related research section.
 								</p>
-								<div class="image main">
-									<img src="images/gwplotter.png">
-									<figcaption>GWPlotter (Jeremy Baier branch) showing , taken from <a href="https://jeremy-baier.github.io/GWplotter/">GWPlotter (Jeremy Baier branch)</a>. 
-										Original from <a href="https://www.sr.bham.ac.uk/~cplb/GWplotter/">GWPlotter (Main branch)</a>.</figcaption>
+								<div class="image main gwplot-container">
+									<img src="images/gwplotter.png" alt="Gravitational wave spectrum showing detector sensitivity curves for NANOGrav, LISA, and aLIGO">
+									<a class="gwplot-region" href="#pta-section"  title="Jump to PTA / NANOGrav research" style="left: 0%;  top: 0%; width: 35%; height: 88%;"></a>
+									<a class="gwplot-region" href="#lisa-section" title="Jump to LISA / EMRI research"   style="left: 35%; top: 0%; width: 32%; height: 88%;"></a>
+									<figcaption>Sensitivity curves for current and proposed gravitational wave detectors. Adapted from <a href="https://jeremy-baier.github.io/GWplotter/">GWPlotter (Jeremy Baier branch)</a>; original from <a href="https://www.sr.bham.ac.uk/~cplb/GWplotter/">GWPlotter (Main branch)</a>.</figcaption>
 								</div>
 							</header>
-							<header class="minor">
-								<h2>Improvements to Calculations of Stochastic GWB Sensitivity Curves</h2>
-								<p>After more than 15 years of observations using pulsar timing arrays (PTAs), the North American Nanohertz Observatory for 
-									Gravitational Waves (NANOGrav) and other PTA collaborations around the globe have found strong evidence for a stochastic 
-									gravitational wave background (GWB). The most probable source of this GWB is a population of inspiraling supermassive black 
-									hole binaries (SMBHBs). The yet to be uncovered anisotropy that is expected to arise from the non-uniform distribution of 
-									SMBHBs in the sky, as well as the individual parameters of those binaries, remains an interesting problem. Additionally, 
-									an anisotropic GWB can be an early harbinger of a continuous wave source from a single SMBHB rather than an isotropic 
-									cosmological source. Hasasia is a code developed to construct realistic sensitivity curves for PTAs such as those utilized 
-									in NANOGrav. In this study, we detail the methods and enhancements made to Hasasia, specifically focusing on the new ability to account 
-									for the anticipated anisotropy in the GWB and its implication for future GWB searches.</p>
-							</header>
-							<header class="minor">
-								<h2>NANOGrav Customized Chromatic Noise Models</h2>
-								<p>In 2023, NANOGrav, alongside pulsar timing arrays around the world, reported strong evidence for a stochastic gravitational 
-									wave background (GWB). The spectral characterization of this emerging background remains noise model dependent. Dispersion 
-									delays in the interstellar medium and interplanetary medium are chromatic (radio-frequency dependent) noise sources which 
-									together can be up to 2 orders of magnitude louder than the GWB. In order to better characterize the GWB, we construct 
-									multiple sets of customized chromatic noise models for all of the pulsars in the NANOGrav 15yr dataset. We test the 
-									significance of multiple noise models for each pulsar and report results which demonstrate the impact of customized 
-									chromatic noise models on GWB parameter estimation and significance.</p>
-							</header>
-
-
 						</article>
-						<article class="post featured">
-								<header class="major">
-									<h2>LISA EMRIs</h2>
-									<p>LISA (Laser Interferometer Space Antenna) is the proposed space based gravitational wave detector. 
-									It will be able to detect gravitational waves in the low frequency range between 10<sup>-5</sup> - 10<sup>-1</sup> Hz. 
-									This makes EMRIs (Extreme Mass Ratio Inspirals) a prime candidate for LISA. EMRIs occur whenever a 
-									compact object (~10 M<sub>☉</sub> ) orbits a MBH (Massive Black Hole)(10<sup>5</sup> M<sub>☉</sub> - 10<sup>8</sup> M<sub>☉</sub> )  </p>
-									<div class="image main">
-										<img src="images/LISA-waves.jpg" width="300" alt="LISA illustration">
-										<figcaption>
-											<a href="http://lisa.jpl.nasa.gov/gallery/lisa-waves.html">NASA illustration of LISA</a>.
-										</figcaption>
-									</div>
-									<div class="image main">
-										<img src="images/LISA noise curve.png" width="300">
-										<figcaption>LISA Sensitivity Curve from: <a href="https://arxiv.org/abs/2402.07571">LISA Definition Study Report</a> </figcaption>
-									</div>
-								</header>
-								<header class="minor">
-									<h2>Gravitational Wave Peeps</h2>
-									<p>These orbits typically begin 
-									as highly eccentric and only emit gravitational waves whenever the compact object (CO) approaches 
-									periapsis, the point of closest approach to the central black hole. Because these orbits are so 
-									long period, and with such high eccentricity it might be assumed that they would be too low frequency 
-									to be detectable by LISA. However, when these very highly eccentric (e ~ 1) signals approach the MBH 
-									they emit a burst of gravitational radiation. As they inspiral further, these bursts will repeat over 
-									10s of thousands of cycles. These repeated bursts of gravitational wave energy are called the gravitational 
-									wave peep and the peeps are a much higher frequency counterpart to the overall signal that is firmly in the 
-									LISA bandwith. The goal of this study is to create a background of gravitational wave peeps out to a redshift 
-									of 3 to determine how such a background may impact otherwise detectable sources by LISA.</p>
-								</header>
 
+						<!-- PTA Anisotropic Sensitivity -->
+						<article id="pta-section" class="post featured">
+							<header class="major">
+								<h2>PTA Anisotropic Sensitivity</h2>
+								<p>
+								Pulsar timing arrays (PTAs) detect gravitational waves at nanohertz frequencies
+								(10<sup>-10</sup>&ndash;10<sup>-7</sup> Hz) by monitoring tiny variations in the arrival
+								times of pulses from millisecond pulsars. With strong evidence now in hand for a
+								stochastic gravitational wave background, most likely sourced by inspiraling
+								supermassive black hole binaries, one of the next big questions is how that
+								background is distributed across the sky. A non-uniform population of binaries should
+								imprint anisotropy on the background, and detecting it would be a strong hint of the
+								underlying astrophysics.
+								</p>
+								<p>
+								My current main thrust is developing an analytical framework for the sensitivity of a
+								PTA to anisotropic backgrounds, pulsar-by-pulsar, direction-by-direction. The
+								figure below shows an effective sensitivity skymap S<sub>eff</sub> for a simulated
+								array; the array is, as expected, most sensitive where pulsars are concentrated. The
+								forthcoming paper will describe the formalism in full.
+								</p>
+								<!-- TODO: add S_eff equation when the arXiv preprint posts -->
+								<div class="image main">
+									<img src="images/S_eff_pixel.png" alt="Effective sensitivity skymap S_eff for a simulated PTA">
+									<figcaption>Effective sensitivity S<sub>eff</sub> for a simulated pulsar timing array, plotted across the sky. Sensitivity is best where pulsars are clustered.</figcaption>
+								</div>
+							</header>
+						</article>
+
+						<!-- PTA Customized Chromatic Noise -->
+						<article class="post featured">
+							<header class="major">
+								<h2>PTA Customized Chromatic Noise</h2>
+								<p>
+								The frequency-dependent (chromatic) delays imprinted on pulse arrival times by the
+								interstellar and interplanetary medium can be up to two orders of magnitude louder
+								than the gravitational wave background itself. How those delays are modeled directly
+								affects the inferred spectrum of the background, so getting the noise models right is
+								essential. I work on building customized chromatic noise models for each pulsar in
+								NANOGrav&rsquo;s datasets, testing the significance of competing noise prescriptions
+								on a per-pulsar basis.
+								</p>
+								<div class="image main" style="max-width: 400px; margin: 2rem auto;">
+									<img src="images/ng12p5_CNM_figure10.png" alt="Customized chromatic noise model results, NANOGrav 12.5-yr dataset">
+									<figcaption>Figure 10 from <a href="https://arxiv.org/abs/2511.22597">Hazboun, Simon, Larsen, Baier, Oliver, et al. (2026)</a>: comparison of customized chromatic noise modeling (blue) against the standard noise approach at 5 (green) and 30 (red) frequencies. The chromatic models bring the recovered gravitational wave background results more in line with the common process.</figcaption>
+								</div>
+							</header>
+						</article>
+
+						<!-- LISA EMRIs and the Gravitational Wave Peep -->
+						<article id="lisa-section" class="post featured">
+							<header class="major">
+								<h2>LISA EMRIs and the Gravitational Wave Peep</h2>
+								<p>
+								LISA, the planned space-based gravitational wave detector, will be sensitive between
+								roughly 10<sup>-5</sup> and 10<sup>-1</sup> Hz. A prime LISA source is the extreme
+								mass ratio inspiral (EMRI): a stellar-mass compact object (~10 M<sub>&#9737;</sub>)
+								spiraling into a massive black hole (10<sup>5</sup>&ndash;10<sup>8</sup>
+								M<sub>&#9737;</sub>) at the center of a galaxy. These orbits typically start out
+								highly eccentric and only emit detectable radiation in brief bursts as the compact
+								object swings past periapsis.
+								</p>
+								<p>
+								Each one of these bursts is a gravitational wave <em>&ldquo;peep&rdquo;</em> &mdash;
+								firmly in the LISA band even when the long-period orbit itself is not. A single peep
+								is unlikely to be individually resolvable, but a cosmological population of them out
+								to redshift z = 3 contributes to LISA&rsquo;s signal confusion noise. My dissertation
+								and follow-up work focuses on modeling that background and quantifying how much it
+								can obscure otherwise-detectable LISA sources.
+								</p>
+								<div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 2rem 0;">
+									<div class="image" style="flex: 1 1 380px; max-width: 100%; margin: 0;">
+										<img src="images/full_emri.jpg" alt="Full EMRI waveform from capture to merger" style="width: 100%; display: block;">
+										<figcaption>A fully modeled EMRI waveform from capture to merger using a numerical kludge code (a = 0.8 M, p = 119.999916 M, e = 0.9999981). Repeated bursts at periapsis give rise to the gravitational wave peep. From <a href="https://iopscience.iop.org/article/10.1088/1361-6382/ad40f2">Oliver et al. (2024)</a>.</figcaption>
+									</div>
+									<div class="image" style="flex: 1 1 380px; max-width: 100%; margin: 0;">
+										<img src="images/peep_background_AE.png" alt="Stochastic background from gravitational wave peeps" style="width: 100%; display: block;">
+										<figcaption>Stochastic background from gravitational wave peeps under three different population assumptions, plotted against the LISA A and E channel sensitivity curves. From <a href="https://journals.aps.org/prd/abstract/10.1103/kgp7-ymyj">Oliver et al. (2026)</a>.</figcaption>
+									</div>
+								</div>
+							</header>
 						</article>
 					</div>
 				<!-- Footer -->
@@ -145,12 +181,11 @@
 								</p>
 							</div>
 							</section>
-						</section>								
-							</section>
+						</section>
 							<section>
 								<h3>Email</h3>
-								<p>oliverda@oregonstate.edu<br />
-										mail@danieljoliver.com</a></p>
+								<p><a href="mailto:oliverda@oregonstate.edu">oliverda@oregonstate.edu</a><br />
+										<a href="mailto:mail@danieljoliver.com">mail@danieljoliver.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>

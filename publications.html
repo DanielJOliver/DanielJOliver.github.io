@@ -6,8 +6,19 @@
 -->
 <html>
 	<head>
-		<title>Daniel Joseph Oliver</title>
+		<title>Publications & Presentations | Daniel J. Oliver</title>
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+		<meta name="description" content="Refereed publications, conference presentations, and arXiv preprints by Daniel J. Oliver." />
+		<meta name="author" content="Daniel J. Oliver" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Publications & Presentations | Daniel J. Oliver" />
+		<meta property="og:description" content="Refereed publications, conference presentations, and arXiv preprints by Daniel J. Oliver." />
+		<meta property="og:url" content="https://danieljoliver.com/publications.html" />
+		<meta property="og:image" content="https://danieljoliver.com/images/Daniel_CherryBlossom.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Publications & Presentations | Daniel J. Oliver" />
+		<meta name="twitter:description" content="Refereed publications, conference presentations, and arXiv preprints by Daniel J. Oliver." />
+		<meta name="twitter:image" content="https://danieljoliver.com/images/Daniel_CherryBlossom.jpg" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,10 +46,10 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">About</a></li>
+							<li><a href="./">About</a></li>
 							<li><a href="research.html">Current Research</a></li>
 							<li class="active"><a href="publications.html">Publications/Presentations</a></li>
-							<li><a href="resume.html">CV</a></li>
+							<li><a href="cv.html">CV</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://orcid.org/0000-0002-7374-6925">ORCID</a></li>
@@ -60,9 +71,109 @@
 								</header>
 
 								<!-- Text stuff -->
+									<!--
+									Hidden until arXiv preprint posts:
+									<header>
+										<h3>Analytical Modeling of Pulsar Timing Array Anisotropic Sensitivity</h3>
+										<p>D. J. Oliver, M. Maggi, K. Gourlie, J. Baier, J. S. Hazboun</p>
+										<p>(In prep)</p>
+									</header>
+									-->
+
+
+									<header>
+										<h3>The NANOGrav 15 yr and 20 yr Datasets: Timing Events and Pulse Shape Changes</h3>
+										<p>B. Jacobson-Bell et al. (62 authors including <strong>D. J. Oliver</strong>)</p>
+										<p>Accepted, The Astrophysical Journal</p>
+										<p><a href="https://arxiv.org/abs/2604.05453">arXiv:2604.05453</a></p>
+										<p><a href="https://ui.adsabs.harvard.edu/abs/arXiv:2604.05453">NASA ADS</a></p>
+										<!-- Altmetric badge -->
+										<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+										<div class="altmetric-embed" data-badge-type="donut" data-arxiv-id="2604.05453"></div>
+
+										<!-- Citation count from Inspire-HEP -->
+										<p id="cite-count-2604">Citations: loading…</p>
+										<script>
+										fetch("https://inspirehep.net/api/literature?q=arxiv:2604.05453")
+											.then(r => r.json())
+											.then(data => {
+												const hits = data.hits.hits;
+												const citeElement = document.getElementById("cite-count-2604");
+												if (hits.length > 0) {
+													const citations = hits[0].metadata.citation_count || 0;
+													const litId = hits[0].id;
+													citeElement.textContent = `Citations: ${citations} (`;
+													const link = document.createElement("a");
+													link.href = `https://inspirehep.net/literature/${litId}`;
+													link.textContent = "Inspire-HEP";
+													link.target = "_blank";
+													citeElement.appendChild(link);
+													citeElement.append(")");
+												} else {
+													citeElement.textContent = "Citations: N/A";
+												}
+											})
+											.catch(() => {
+												document.getElementById("cite-count-2604").textContent =
+													"Citations: unavailable";
+											});
+										</script>
+									</header>
+
+									<header>
+										<h3>The NANOGrav 12.5-year Data Set: Chromatic Noise Characterization &amp; Mitigation with Time-Domain Kernels</h3>
+										<p>J. S. Hazboun, J. Simon, B. Larsen, J. Baier, <strong>D. J. Oliver</strong>, et al. (67 authors), 2026</p>
+										<p><a href="https://doi.org/10.3847/1538-4357/ae4ee0">The Astrophysical Journal</a></p>
+										<p><a href="https://arxiv.org/abs/2511.22597">arXiv:2511.22597</a></p>
+										<p><a href="https://ui.adsabs.harvard.edu/abs/arXiv:2511.22597">NASA ADS</a></p>
+										<!-- Altmetric badge -->
+										<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+										<div class="altmetric-embed" data-badge-type="donut" data-arxiv-id="2511.22597"></div>
+
+										<!-- Citation count from Inspire-HEP -->
+										<p id="cite-count-2511">Citations: loading…</p>
+										<script>
+										fetch("https://inspirehep.net/api/literature?q=arxiv:2511.22597")
+											.then(r => r.json())
+											.then(data => {
+												const hits = data.hits.hits;
+												const citeElement = document.getElementById("cite-count-2511");
+												if (hits.length > 0) {
+													const citations = hits[0].metadata.citation_count || 0;
+													const litId = hits[0].id;
+													citeElement.textContent = `Citations: ${citations} (`;
+													const link = document.createElement("a");
+													link.href = `https://inspirehep.net/literature/${litId}`;
+													link.textContent = "Inspire-HEP";
+													link.target = "_blank";
+													citeElement.appendChild(link);
+													citeElement.append(")");
+												} else {
+													citeElement.textContent = "Citations: N/A";
+												}
+											})
+											.catch(() => {
+												document.getElementById("cite-count-2511").textContent =
+													"Citations: unavailable";
+											});
+										</script>
+									</header>
+
+									<!--
+									Hidden until arXiv preprint posts:
+									<header>
+										<h3>The NANOGrav 15 yr Data Set: Customized Chromatic Noise Models</h3>
+										<p>B. Larsen, J. G. Baier, <strong>D. J. Oliver</strong>, K. Wayt, J. Simon, J. S. Hazboun, C. M. F. Mingarelli, et al. (54 authors)</p>
+										<p>Accepted, The Astrophysical Journal</p>
+									</header>
+									-->
+
 									<header>
 										<h3>Gravitational Wave Peep Contributions to Background Signal Confusion Noise for LISA</h3>
-										<p> <a href="https://arxiv.org/abs/2507.19704">arXiv:2507.19704</a></p>
+										<p>D. J. Oliver, A. D. Johnson, L. Janssen, J. Berrier, K. Glampedakis, D. Kennefick, 2026</p>
+										<p><a href="https://journals.aps.org/prd/abstract/10.1103/kgp7-ymyj">Physical Review D</a></p>
+										<p><a href="https://arxiv.org/abs/2507.19704">arXiv:2507.19704</a></p>
+										<p><a href="https://ui.adsabs.harvard.edu/abs/arXiv:2507.19704">NASA ADS</a></p>
 										<!-- Altmetric badge -->
 										<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 										<div class="altmetric-embed" data-badge-type="donut" data-arxiv-id="2507.19704"></div>
@@ -73,33 +184,30 @@
 										fetch("https://inspirehep.net/api/literature?q=arxiv:2507.19704")
 											.then(r => r.json())
 											.then(data => {
-											const hits = data.hits.hits;
-											const citeElement = document.getElementById("cite-count-2507");
-
-											if (hits.length > 0) {
-												const citations = hits[0].metadata.citation_count || 0;
-
-												citeElement.textContent = `Citations: ${citations} (`;
-
-												const link = document.createElement("a");
-												link.href = "https://inspirehep.net/literature/2954772";
-												link.textContent = "Inspire‑HEP";
-												link.target = "_blank";
-
-												citeElement.appendChild(link);
-												citeElement.append(")");
-											} else {
-												citeElement.textContent = "Citations: N/A";
-											}
+												const hits = data.hits.hits;
+												const citeElement = document.getElementById("cite-count-2507");
+												if (hits.length > 0) {
+													const citations = hits[0].metadata.citation_count || 0;
+													const litId = hits[0].id;
+													citeElement.textContent = `Citations: ${citations} (`;
+													const link = document.createElement("a");
+													link.href = `https://inspirehep.net/literature/${litId}`;
+													link.textContent = "Inspire-HEP";
+													link.target = "_blank";
+													citeElement.appendChild(link);
+													citeElement.append(")");
+												} else {
+													citeElement.textContent = "Citations: N/A";
+												}
 											})
 											.catch(() => {
-											document.getElementById("cite-count-2507").textContent =
-												"Citations: unavailable";
+												document.getElementById("cite-count-2507").textContent =
+													"Citations: unavailable";
 											});
 										</script>
 										<p> Abstract: Two-body gravitational interactions will occasionally lead to a stellar-mass compact object entering a very highly eccentric orbit around a massive black hole at the center of a galaxy. Gravitational radiation damping will subsequently result in an extreme mass ratio inspiral. Much of the inspiral time of these events is spent with the compact object on a long-period orbit, with a brief burst of gravitational wave emission at periapsis firmly in the mHz band. Burst orbits have been previously modeled as parabolic, with a focus on extreme examples that could be detectable by space-based gravitational wave detectors. This work focuses on the recurring bursts called "peeps". Peeps are not likely to be individually resolvable; however, it is also important to consider them as possible sources of signal confusion noise because they do generate a signal within the LISA band with every pericenter passage. To account for peeps, we must utilize estimates for EMRI capture parameters along with tracking the massive black hole population out to a redshift of 3 using the Illustris Project. Then, this population is combined with an EMRI formation rate to estimate the number of EMRI events per unit volume for LISA. In this study, we model three different assumptions for the gravitational wave background produced by these highly eccentric peeps. We find that with our two most likely backgrounds, the signal may result in a slight rise of the LISA noise floor (SNR ~0.3-2.4); however, in the most abundant case, the background generated by these sources would be detectable on its own and likely obscure many potentially detectable sources (SNR ~77). </p>
 										<div class="image main">
-											<img src="images/BG1-3_AE_char.png" width="300" alt="Peep Backgrounds">
+											<img src="images/peep_background_AE.png" width="300" alt="Peep Backgrounds">
 											<figcaption>Stochastic background from gravitational wave peeps showing the total signal of from three different assumptions of population rates plotted over the LISA sensitivity curve for the A and E channels.</figcaption>
 										</div>
 									</header>
@@ -107,39 +215,37 @@
 										<h3>Gravitational wave peeps from EMRIs and their implication for LISA signal confusion noise</h3>
 										<p> <a href="https://iopscience.iop.org/article/10.1088/1361-6382/ad40f2">Classical and Quantum Gravity</a></p>
 										<p> <a href="https://arxiv.org/abs/2305.05793">arXiv:2305.05793</a></p>
+										<p><a href="https://ui.adsabs.harvard.edu/abs/arXiv:2305.05793">NASA ADS</a></p>
 										<!-- Altmetric badge -->
 										<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 										<div class="altmetric-embed" data-badge-type="donut" data-arxiv-id="2305.05793"></div>
 
 										<!-- Citation count from Inspire-HEP -->
-										<p id="cite-count">Citations: loading…</p>
+										<p id="cite-count-2305">Citations: loading…</p>
 										<script>
 										fetch("https://inspirehep.net/api/literature?q=arxiv:2305.05793")
-										.then(r => r.json())
-										.then(data => {
-											const hits = data.hits.hits;
-											const citeElement = document.getElementById("cite-count");
-
-											if (hits.length > 0) {
-											const citations = hits[0].metadata.citation_count || 0;
-
-											citeElement.textContent = `Citations: ${citations} (`;
-
-											const link = document.createElement("a");
-											link.href = "https://inspirehep.net/literature/2658414";
-											link.textContent = "Inspire‑HEP";
-											link.target = "_blank";
-
-											citeElement.appendChild(link);
-											citeElement.append(")");
-											} else {
-											citeElement.textContent = "Citations: N/A";
-											}
-										})
-										.catch(() => {
-											document.getElementById("cite-count").textContent =
-											"Citations: unavailable";
-										});
+											.then(r => r.json())
+											.then(data => {
+												const hits = data.hits.hits;
+												const citeElement = document.getElementById("cite-count-2305");
+												if (hits.length > 0) {
+													const citations = hits[0].metadata.citation_count || 0;
+													const litId = hits[0].id;
+													citeElement.textContent = `Citations: ${citations} (`;
+													const link = document.createElement("a");
+													link.href = `https://inspirehep.net/literature/${litId}`;
+													link.textContent = "Inspire-HEP";
+													link.target = "_blank";
+													citeElement.appendChild(link);
+													citeElement.append(")");
+												} else {
+													citeElement.textContent = "Citations: N/A";
+												}
+											})
+											.catch(() => {
+												document.getElementById("cite-count-2305").textContent =
+													"Citations: unavailable";
+											});
 										</script>
 
 										<p> Abstract: Scattering events around the center of massive galaxies will occasionally toss a stellar-mass compact object into an orbit around the massive black hole (MBH) at the center, beginning an extreme mass ratio inspiral (EMRI). The early stages of such a highly eccentric orbit are not likely to produce detectable gravitational waves (GWs), as the source will only be in a suitable frequency band briefly when it is close to periapsis during each long-period orbit. This repeated burst of emission, firmly in the millihertz band, is the GW peep. While a single peep is not likely to be detectable, if we consider an ensemble of such subthreshold sources, spread across the Universe, together they may produce an unresolvable background noise that could obscure sources otherwise detectable by the Laser Interferometer Space Antenna. Previous studies of the extreme mass ratio signal confusion background focused either on parabolic orbits near the MBH or events closer to merger. We seek to improve this characterization by implementing numerical kludge waveforms that can calculate highly eccentric orbits with relativistic effects. Our focus is on orbits at the point of capture that are farther away from the MBH. Here we present the waveforms and spectra of peeps generated from recent calculations of EMRIs/extreme mass ratio bursts capture parameters and discuss how these can be used to estimate the signal confusion noise generated by such events. We demonstrate the effects of changing the orbital parameters on the resulting spectra as well as showing direct comparisons to parabolic orbits and why the GW 'peep' needs to be studied further. The results of this study will be expanded upon in a further paper that aims to provide an update on the EMRI signal confusion noise problem.</p>
@@ -156,6 +262,21 @@
 								</header>
 
 								<!-- Text stuff -->
+									<header>
+										<h3>Forecasting PTA Anisotropy with Analytical Skymaps and Sensitivity Curves</h3>
+										<p>Oral Presentation for American Physical Society (APS) Global Physics Summit<br />
+										March 2026 - Denver, CO</p>
+									</header>
+									<header>
+										<h3>Analytical Skymaps for PTA Stochastic Background Anisotropy</h3>
+										<p>Oral Presentation for American Astronomical Society (AAS) Winter 247 Meeting<br />
+										January 2026 - Phoenix, AZ</p>
+									</header>
+									<header>
+										<h3>Analytical Sensitivity Curves and Skymaps for PTA Stochastic Background Anisotropy</h3>
+										<p>Oral Presentation for NANOGrav Fall Meeting<br />
+										November 2025 - Missoula, MT</p>
+									</header>
 									<header>
 										<h3>Building PTA Sensitivity Curves for Stochastic Background Anisotropy</h3>
 										<p>Oral Presentation for International Pulsar Timing Array (IPTA) Science Meeting<br />
@@ -237,12 +358,11 @@
 								</p>
 							</div>
 							</section>
-						</section>								
-							</section>
+						</section>
 							<section>
 								<h3>Email</h3>
-								<p>oliverda@oregonstate.edu<br />
-										mail@danieljoliver.com</a></p>
+								<p><a href="mailto:oliverda@oregonstate.edu">oliverda@oregonstate.edu</a><br />
+										<a href="mailto:mail@danieljoliver.com">mail@danieljoliver.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
