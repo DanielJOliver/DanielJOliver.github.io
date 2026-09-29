@@ -61,6 +61,22 @@
 			#main .post > header:not(.major) .pub-metrics p {
 				margin: 0;
 			}
+			/* Multi-panel figure: two panels per row, an odd last panel centered below */
+			#main .post > header:not(.major) .pub-figs {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 1.5rem 2rem;
+				margin: 0 0 1rem 0;
+			}
+			#main .post > header:not(.major) .pub-figs figure {
+				flex: 0 1 calc(50% - 1rem);
+				margin: 0;
+				text-align: center;
+			}
+			#main .post > header:not(.major) .pub-figs figcaption {
+				margin-top: 0.4rem;
+			}
 			/* Stack the two columns on narrow screens */
 			@media (max-width: 640px) {
 				#main .post > header:not(.major) .pub-body {
@@ -69,6 +85,9 @@
 				}
 				#main .post > header:not(.major) .pub-metrics {
 					width: auto;
+				}
+				#main .post > header:not(.major) .pub-figs figure {
+					flex-basis: 100%;
 				}
 			}
 		</style>
@@ -207,8 +226,21 @@
 											</div>
 										</div>
 										<div class="image main">
-										<img src="images/S_eff_pixel.png" width="300" alt="Effective sensitivity skymap">
-										<figcaption>Effective sensitivity S<sub>eff</sub> for a simulated pulsar timing array, plotted across the sky. Sensitivity is best where pulsars are clustered.</figcaption>
+											<div class="pub-figs">
+												<figure>
+													<img src="images/directional_seff_rad.png" alt="Radiometer effective sensitivity skymap">
+													<figcaption>(a) Radiometer S<sub>eff</sub><sup>rad</sup></figcaption>
+												</figure>
+												<figure>
+													<img src="images/directional_seff_full.png" alt="Full-Fisher effective sensitivity skymap">
+													<figcaption>(b) Full Fisher S<sub>eff</sub><sup>full</sup></figcaption>
+												</figure>
+												<figure>
+													<img src="images/directional_seff_ratio.png" alt="Ratio of full-Fisher to radiometer effective sensitivity">
+													<figcaption>(c) Ratio S<sub>eff</sub><sup>full</sup> / S<sub>eff</sub><sup>rad</sup></figcaption>
+												</figure>
+											</div>
+											<figcaption>Per-pixel effective sensitivity S<sub>eff</sub> at the peak sensitivity frequency (<em>f</em> &asymp; 8.54 nHz) for the 16-year SPTA. (a) shows the diagonal radiometer S<sub>eff</sub><sup>rad</sup>. (b) shows the full-Fisher S<sub>eff</sub><sup>full</sup>. (c) shows the ratio of the full-Fisher to the radiometer, which reflects the over-parameterization of the pixel basis relative to the array&rsquo;s ~&#8467;<sub>eff</sub><sup>2</sup> independent modes.</figcaption>
 										</div>
 									</header>
 
