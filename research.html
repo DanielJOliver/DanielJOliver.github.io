@@ -24,9 +24,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Subheadings inside a research section (e.g. LISA EMRIs); undo the template's small-print "header > h3 + p" rule */
-			#main .post header.major > h3.research-sub { margin: 3.5rem 0 1.5rem 0; }
-			#main .post header.major > h3.research-sub + p { font-size: 1rem; margin-top: 0; }
+			/* Subheadings inside a detector section (h3 = topic, h4 = sub-topic); undo the template's small-print "header > h3/h4 + p" rules */
+			#main .post header.major > h3.research-sub { font-size: 1.6rem; margin: 4.5rem 0 1.5rem 0; }
+			#main .post header.major > h4.research-sub { font-size: 1.1rem; margin: 3rem 0 1.25rem 0; }
+			#main .post header.major > .research-sub + p { font-size: 1rem; margin-top: 0; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -87,14 +88,33 @@
 							</header>
 						</article>
 
-						<!-- PTA Anisotropic Sensitivity -->
+						<!-- Pulsar Timing Arrays: overview, then Anisotropic Sensitivity + Customized Chromatic Noise Models -->
 						<article id="pta-section" class="post featured">
 							<header class="major">
-								<h2>PTA Anisotropic Sensitivity</h2>
+								<h2>Pulsar Timing Arrays</h2>
 								<p>
 								Pulsar timing arrays (PTAs) detect gravitational waves at nanohertz frequencies
 								(10<sup>-10</sup>&ndash;10<sup>-7</sup> Hz) by monitoring tiny variations in the arrival
-								times of pulses from millisecond pulsars. With strong evidence now in hand for a
+								times of pulses from millisecond pulsars.
+								</p>
+								<!-- Pulsar timing + NANOGrav: all four sentences are verbatim from the introduction of Jacobson-Bell et al. 2026 (ApJ 1005, 58; arXiv:2604.05453) -->
+								<p>
+								Pulsar timing for the detection of nanohertz-scale gravitational waves, first suggested by
+								M. V. Sazhin (1978) and S. Detweiler (1979), leverages the stability of pulse profiles to estimate
+								minuscule deviations from their expected times of arrival (TOAs). Such deviations, if correlated
+								between all observed pulsars across the sky in agreement with the Hellings&ndash;Downs curve
+								(R. W. Hellings &amp; G. S. Downs 1983), point toward the existence of a stochastic nanohertz
+								gravitational-wave background (GWB). Pulsar timing arrays (PTAs) such as the North American
+								Nanohertz Observatory for Gravitational Waves (NANOGrav) are built preferentially from millisecond
+								pulsars (MSPs), named for their short rotational periods and famous for their high rotational
+								stability relative to canonical pulsars. The NANOGrav PTA consisted of 68 MSPs at the time of the
+								15 yr data release (<a href="https://arxiv.org/abs/2306.16217">G. Agazie et al. 2023</a>), all of which were chosen for their pulse
+								shape stability, rotational stability, and/or brightness. (<a href="https://doi.org/10.3847/1538-4357/ae6db6">Jacobson-Bell et al. 2026</a>)
+								</p>
+
+								<h3 id="anisotropy-section" class="research-sub">Anisotropic Sensitivity</h3>
+								<p>
+								With strong evidence now in hand for a
 								stochastic gravitational wave background, most likely sourced by inspiraling
 								supermassive black hole binaries, one of the next big questions is how that
 								background is distributed across the sky. A non-uniform population of binaries should
@@ -114,13 +134,8 @@
 									<img src="images/directional_seff_rad_large.png" alt="Radiometer effective sensitivity skymap S_eff for the 16-year SPTA">
 									<figcaption>Per-pixel radiometer effective sensitivity S<sub>eff</sub><sup>rad</sup> at the peak sensitivity frequency (<em>f</em> &asymp; 8.54 nHz) for the 16-year SPTA. Lighter regions are more sensitive; sensitivity is best where pulsars (stars) are clustered. Figure 6a from <a href="https://arxiv.org/abs/2608.00250">Oliver et al. (2026b)</a>.</figcaption>
 								</div>
-							</header>
-						</article>
 
-						<!-- PTA Customized Chromatic Noise -->
-						<article class="post featured">
-							<header class="major">
-								<h2>PTA Customized Chromatic Noise</h2>
+								<h3 id="chromatic-section" class="research-sub">Customized Chromatic Noise Models</h3>
 								<p>
 								The frequency-dependent (chromatic) delays imprinted on pulse arrival times by the
 								interstellar and interplanetary medium can be up to two orders of magnitude louder
@@ -130,6 +145,24 @@
 								NANOGrav&rsquo;s datasets, testing the significance of competing noise prescriptions
 								on a per-pulsar basis.
 								</p>
+								<!-- NANOGrav 15 yr CNMs: all three sentences are verbatim from the abstract of Larsen, Baier, Oliver, et al. 2026 (ApJ 1005, 29; arXiv:2606.28571) -->
+								<p>
+								These delays also strongly depend on the line-of-sight properties to each individual pulsar. To address
+								this, we present customized chromatic noise models for 67 pulsars in the NANOGrav 15 yr dataset. After
+								applying our chromatic models, we observe significant impacts on the inference of achromatic noise in 19
+								out of 67 pulsars, finding in several cases that a previously significant achromatic noise process can be
+								partially or entirely described as chromatic. (<a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier, Oliver, et al. 2026</a>)
+								</p>
+								<!-- GW impacts of the CNMs: all three sentences are verbatim from the abstract of Agarwal et al. 2026 (arXiv:2606.28554) -->
+								<p>
+								We report updated nHz gravitational wave (GW) significance, characterization, and interpretations using
+								the customized chromatic-noise models (CNMs) developed in <a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier et al. (2026)</a> for the
+								NANOGrav 15-year data set. We find increased evidence for the Hellings-Downs (HD) correlation signature
+								of the stochastic gravitational wave background (GWB), with a Bayes factor of 1571 &plusmn; 14 for
+								HD-correlations over a common uncorrelated red-noise process using a power-law model with 14 Fourier
+								modes. We find this &sim;8&times; increase in Bayes factor from <a href="https://arxiv.org/abs/2306.16213">Agazie et al. (2023a)</a>
+								is a result of improved noise mitigation. (<a href="https://arxiv.org/abs/2606.28554">Agarwal et al. 2026</a>)
+								</p>
 								<div class="image main" style="max-width: 400px; margin: 2rem auto;">
 									<img src="images/ng12p5_CNM_figure10.png" alt="Customized chromatic noise model results, NANOGrav 12.5-yr dataset">
 									<figcaption>Figure 10 from <a href="https://arxiv.org/abs/2511.22597">Hazboun, Simon, Larsen, Baier, Oliver, et al. (2026)</a>: comparison of customized chromatic noise modeling (blue) against the standard noise approach at 5 (green) and 30 (red) frequencies. The chromatic models bring the recovered gravitational wave background results more in line with the common process.</figcaption>
@@ -137,22 +170,39 @@
 							</header>
 						</article>
 
-						<!-- LISA EMRIs: the Gravitational Wave Peep + Post-Mission EMRIs -->
+						<!-- LISA: overview, then Extreme Mass Ratio Inspirals (Gravitational Wave Peep + Post-Mission EMRIs) -->
 						<article id="lisa-section" class="post featured">
 							<header class="major">
-								<h2>LISA Extreme Mass Ratio Inspirals</h2>
+								<h2>Laser Interferometer Space Antenna</h2>
+								<!-- LISA: all three sentences are verbatim from the introduction of Oliver et al. 2024 (CQG 41, 115004); reference numbers dropped -->
 								<p>
-								LISA, the planned space-based gravitational wave detector, will be sensitive between
-								roughly 10<sup>-5</sup> and 10<sup>-1</sup> Hz. A prime LISA source is the extreme
+								Gravitational waves (GWs) were first detected with the Laser Interferometer Gravitational Wave Observatory
+								(LIGO) on 14 September 2015, generated from two black holes on the order of &sim;30 M<sub>&#9737;</sub>. While
+								LIGO allowed us access to high-frequency GW sources at low redshift, the Laser Interferometer Space Antenna
+								(LISA), the proposed ESA-NASA space-based GW detector, will allow us to look into lower frequencies
+								(0.1 mHz&ndash;0.1 Hz) and expand our range to redshifts of z &sim; 20. The technology behind LISA has been
+								successfully tested by LISA Pathfinder which produced outstanding results showing that the drag-free
+								technology can work with great accuracy. (<a href="https://iopscience.iop.org/article/10.1088/1361-6382/ad40f2">Oliver et al. 2024</a>)
+								</p>
+								<!-- LISA mission duration: verbatim from the introduction of Oliver et al. 2026c (arXiv:2609.36298); reference numbers dropped -->
+								<p>
+								The 2017 LISA proposal specified a nominal science phase of four years, which the LISA Definition Study
+								Report revises to a 4.5-year phase at &sim;82% uptime, resulting in &sim;3.69 years of accumulated data,
+								with a possible extension out to ten years. (<a href="https://arxiv.org/abs/2609.36298">Oliver et al. 2026c</a>)
+								</p>
+
+								<h3 id="emri-section" class="research-sub">Extreme Mass Ratio Inspirals</h3>
+								<p>
+								A prime LISA source is the extreme
 								mass ratio inspiral (EMRI): a stellar-mass compact object (~10 M<sub>&#9737;</sub>)
 								spiraling into a massive black hole (10<sup>5</sup>&ndash;10<sup>8</sup>
 								M<sub>&#9737;</sub>) at the center of a galaxy.
 								</p>
-								<h3 id="peep-section" class="research-sub">The Gravitational Wave Peep</h3>
+								<h4 id="peep-section" class="research-sub">The Gravitational Wave Peep</h4>
 								<p>
 								EMRI orbits typically start out highly eccentric and only emit detectable radiation
 								in brief bursts as the compact object swings past periapsis.
-								Each one of these bursts is a gravitational wave <em>&ldquo;peep&rdquo;</em> &mdash;
+								Each one of these bursts is a gravitational wave <em>&ldquo;peep&rdquo;</em>,
 								firmly in the LISA band even when the long-period orbit itself is not. A single peep
 								is unlikely to be individually resolvable, but a cosmological population of them out
 								to redshift z = 3 contributes to LISA&rsquo;s signal confusion noise. My dissertation
@@ -169,7 +219,7 @@
 										<figcaption>Stochastic background from gravitational wave peeps under three different population assumptions, plotted against the LISA A and E channel sensitivity curves. From <a href="https://journals.aps.org/prd/abstract/10.1103/kgp7-ymyj">Oliver et al. (2026a)</a>.</figcaption>
 									</div>
 								</div>
-								<h3 id="post-mission-section" class="research-sub">Post-Mission EMRIs</h3>
+								<h4 id="post-mission-section" class="research-sub">Post-Mission EMRIs</h4>
 								<!-- Post-mission EMRIs: both sentences are verbatim from the abstract of arXiv:2609.36298 -->
 								<p>
 								A stellar-mass compact object can radiate in the millihertz band for years to decades before it
