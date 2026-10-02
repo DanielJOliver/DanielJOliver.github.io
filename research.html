@@ -92,22 +92,11 @@
 						<article id="pta-section" class="post featured">
 							<header class="major">
 								<h2>Pulsar Timing Arrays</h2>
+								<!-- Second sentence verbatim from the introduction of Jacobson-Bell et al. 2026 (ApJ 1005, 58) -->
 								<p>
 								Pulsar timing arrays (PTAs) detect gravitational waves at nanohertz frequencies
 								(10<sup>-10</sup>&ndash;10<sup>-7</sup> Hz) by monitoring tiny variations in the arrival
-								times of pulses from millisecond pulsars.
-								</p>
-								<!-- Pulsar timing + NANOGrav: all four sentences are verbatim from the introduction of Jacobson-Bell et al. 2026 (ApJ 1005, 58; arXiv:2604.05453) -->
-								<p>
-								Pulsar timing for the detection of nanohertz-scale gravitational waves, first suggested by
-								M. V. Sazhin (1978) and S. Detweiler (1979), leverages the stability of pulse profiles to estimate
-								minuscule deviations from their expected times of arrival (TOAs). Such deviations, if correlated
-								between all observed pulsars across the sky in agreement with the Hellings&ndash;Downs curve
-								(R. W. Hellings &amp; G. S. Downs 1983), point toward the existence of a stochastic nanohertz
-								gravitational-wave background (GWB). Pulsar timing arrays (PTAs) such as the North American
-								Nanohertz Observatory for Gravitational Waves (NANOGrav) are built preferentially from millisecond
-								pulsars (MSPs), named for their short rotational periods and famous for their high rotational
-								stability relative to canonical pulsars. The NANOGrav PTA consisted of 68 MSPs at the time of the
+								times of pulses from millisecond pulsars. The NANOGrav PTA consisted of 68 MSPs at the time of the
 								15 yr data release (<a href="https://arxiv.org/abs/2306.16217">G. Agazie et al. 2023</a>), all of which were chosen for their pulse
 								shape stability, rotational stability, and/or brightness. (<a href="https://doi.org/10.3847/1538-4357/ae6db6">Jacobson-Bell et al. 2026</a>)
 								</p>
@@ -128,8 +117,6 @@
 								<p>
 								I have recently been developing an analytical framework for the sensitivity of a
 								PTA to anisotropic backgrounds, pulsar-by-pulsar, direction-by-direction. The
-								figure below shows an effective sensitivity skymap S<sub>eff</sub> for a simulated
-								array; the array is, as expected, most sensitive where pulsars are concentrated. The
 								formalism is described in full in <a href="https://arxiv.org/abs/2608.00250">Oliver et al. (2026b)</a>,
 								and is released as an extension to the <a href="https://github.com/Hazboun6/hasasia">hasasia</a> sensitivity package.
 								</p>
@@ -143,30 +130,24 @@
 								<p>
 								The frequency-dependent (chromatic) delays imprinted on pulse arrival times by the
 								interstellar and interplanetary medium can be up to two orders of magnitude louder
-								than the gravitational wave background itself. How those delays are modeled directly
-								affects the inferred spectrum of the background, so getting the noise models right is
-								essential. I work on building customized chromatic noise models for each pulsar in
+								than the gravitational wave background itself. I work on building customized chromatic noise models for each pulsar in
 								NANOGrav&rsquo;s datasets, testing the significance of competing noise prescriptions
 								on a per-pulsar basis.
 								</p>
-								<!-- NANOGrav 15 yr CNMs: all three sentences are verbatim from the abstract of Larsen, Baier, Oliver, et al. 2026 (ApJ 1005, 29; arXiv:2606.28571) -->
+								<!-- NANOGrav 15 yr CNMs: verbatim from the abstract of Larsen, Baier, Oliver, et al. 2026 (ApJ 1005, 29; arXiv:2606.28571) -->
 								<p>
-								These delays also strongly depend on the line-of-sight properties to each individual pulsar. To address
-								this, we present customized chromatic noise models for 67 pulsars in the NANOGrav 15 yr dataset. After
-								applying our chromatic models, we observe significant impacts on the inference of achromatic noise in 19
+								After applying our chromatic models, we observe significant impacts on the inference of achromatic noise in 19
 								out of 67 pulsars, finding in several cases that a previously significant achromatic noise process can be
 								partially or entirely described as chromatic. (<a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier, Oliver, et al. 2026</a>)
 								</p>
-								<!-- Caption verbatim from Figure 3 of Larsen, Baier, Oliver, et al. 2026 -->
+								<!-- Caption: first two sentences of Figure 3 of Larsen, Baier, Oliver, et al. 2026, verbatim -->
 								<div class="image main">
 									<img src="images/ng15_cnm_models.jpg" alt="Bar chart of the favored customized chromatic noise model for each NANOGrav 15-yr pulsar, grouped by basis type">
-									<figcaption>The final models after the model selection process are represented in this bar chart. The pulsars are split into three columns corresponding to the favored basis type. The favored basis size (either <em>dt</em> in days or <em>N</em><sub>f</sub>) is color-coded, with the largest <em>dt</em> sharing a color with the smallest <em>N</em><sub>f</sub> since both represent smaller basis sizes. An asterisk indicates that the favored model includes an FC model component. Specific time-domain kernels are listed after each pulsar in the TD column. Inset bar chart: horizontal bars show the number of pulsars with significant red, DM, FC, SW, and &nu;-dependent DM noise (parenthetical values indicate the total number of pulsars for which the noise process is included, even if it was not significant). The number of pulsars with different combinations of these noise types is indicated by the vertical bars, with bar colors indicating the type of GP basis used for all chromatic GPs. Figure 3 from <a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier, Oliver, et al. (2026)</a>.</figcaption>
+									<figcaption>The final models after the model selection process are represented in this bar chart. The pulsars are split into three columns corresponding to the favored basis type. Figure 3 from <a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier, Oliver, et al. (2026)</a>.</figcaption>
 								</div>
-								<!-- GW impacts of the CNMs: all three sentences are verbatim from the abstract of Agarwal et al. 2026 (arXiv:2606.28554) -->
+								<!-- GW impacts of the CNMs: both sentences verbatim from the abstract of Agarwal et al. 2026 (arXiv:2606.28554) -->
 								<p>
-								We report updated nHz gravitational wave (GW) significance, characterization, and interpretations using
-								the customized chromatic-noise models (CNMs) developed in <a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier et al. (2026)</a> for the
-								NANOGrav 15-year data set. We find increased evidence for the Hellings-Downs (HD) correlation signature
+								We find increased evidence for the Hellings-Downs (HD) correlation signature
 								of the stochastic gravitational wave background (GWB), with a Bayes factor of 1571 &plusmn; 14 for
 								HD-correlations over a common uncorrelated red-noise process using a power-law model with 14 Fourier
 								modes. We find this &sim;8&times; increase in Bayes factor from <a href="https://arxiv.org/abs/2306.16213">Agazie et al. (2023a)</a>
@@ -183,26 +164,14 @@
 						<article id="lisa-section" class="post featured">
 							<header class="major">
 								<h2>Laser Interferometer Space Antenna</h2>
-								<!-- LISA: all three sentences are verbatim from the introduction of Oliver et al. 2024 (CQG 41, 115004); reference numbers dropped -->
 								<p>
-								Gravitational waves (GWs) were first detected with the Laser Interferometer Gravitational Wave Observatory
-								(LIGO) on 14 September 2015, generated from two black holes on the order of &sim;30 M<sub>&#9737;</sub>. While
-								LIGO allowed us access to high-frequency GW sources at low redshift, the Laser Interferometer Space Antenna
-								(LISA), the proposed ESA-NASA space-based GW detector, will allow us to look into lower frequencies
-								(0.1 mHz&ndash;0.1 Hz) and expand our range to redshifts of z &sim; 20. The technology behind LISA has been
-								successfully tested by LISA Pathfinder which produced outstanding results showing that the drag-free
-								technology can work with great accuracy. (<a href="https://iopscience.iop.org/article/10.1088/1361-6382/ad40f2">Oliver et al. 2024</a>)
+								LISA, the planned space-based gravitational wave detector, will be sensitive between
+								roughly 10<sup>-5</sup> and 10<sup>-1</sup> Hz.
 								</p>
-								<!-- LISA mission duration: verbatim from the introduction of Oliver et al. 2026c (arXiv:2609.36298); reference numbers dropped -->
-								<p>
-								The 2017 LISA proposal specified a nominal science phase of four years, which <a href="https://arxiv.org/abs/2402.07571">the LISA Definition Study
-								Report</a> revises to a 4.5-year phase at &sim;82% uptime, resulting in &sim;3.69 years of accumulated data,
-								with a possible extension out to ten years. (<a href="https://arxiv.org/abs/2609.36298">Oliver et al. 2026c</a>)
-								</p>
-								<!-- Caption verbatim from Figure 2.2 of the LISA Definition Study Report (Red Book; Colpi et al. 2024, arXiv:2402.07571); the "Chapter 3 presents..." cross-reference sentence is dropped -->
+								<!-- Caption: first sentence of Figure 2.2 of the LISA Definition Study Report (Red Book; Colpi et al. 2024, arXiv:2402.07571), verbatim -->
 								<div class="image main">
 									<img src="images/LISA%20noise%20curve.png" alt="LISA sensitivity curve with the primary LISA source classes in the frequency-amplitude plane">
-									<figcaption>Illustration of the primary LISA source classes in the gravitational wave (GW) frequency-amplitude plane. Included are merging massive Black Hole binaries (MBHBs) and an extreme mass-ratio inspiral (EMRI) at moderate redshift; stellar-mass Black Holes (sBHs), including potential multiband sources, at low redshift; and Galactic binaries (GBs), including verification binaries (VBs), in the Milky Way. Solid teal, solid blue and dashed black lines denote sensitivity limits from instrumental noise alone, the unresolved GW foreground, and their sum, respectively. The displacement of the cloud of resolvable sources above the noise is due to the detection threshold being set to signal-to-noise ratio (SNR)=7. The grey shaded area is the extrapolation of LISA&rsquo;s instrumental noise below 0.1 mHz. All quantities are expressed as Strain Amplitude Spectral Densities (ASDs) in order to facilitate a unified plot. For deterministic signals, the ASD is not formally defined but can be approximated as <em>A<sub>f</sub></em>&radic;<em>f</em> where <em>A<sub>f</sub></em> is the Fourier amplitude and <em>f</em> is the Fourier frequency. Figure 2.2 from the <a href="https://arxiv.org/abs/2402.07571">LISA Definition Study Report (Red Book; Colpi et al. 2024)</a>.</figcaption>
+									<figcaption>Illustration of the primary LISA source classes in the gravitational wave (GW) frequency-amplitude plane. Figure 2.2 from the <a href="https://arxiv.org/abs/2402.07571">LISA Definition Study Report (Red Book; Colpi et al. 2024)</a>.</figcaption>
 								</div>
 
 								<h3 id="emri-section" class="research-sub">Extreme Mass Ratio Inspirals</h3>
@@ -253,7 +222,7 @@
 										<figcaption style="text-align: center;">(b) Merges at 20 years</figcaption>
 									</div>
 								</div>
-								<figcaption>Four-year spectrograms of the strain for one EMRI (with parameters M = 10<sup>6</sup> M<sub>&#9737;</sub>, m = 10 M<sub>&#9737;</sub>, a = 0.9, e<sub>f</sub> = 0.05, at redshift z = 1), but starting at two different times. In (a) one sees the waveform starting four years before plunge. In (b), it starts 20 years before plunge. Clearly, both four-year segments are basically in-band for LISA, but are qualitatively different. From <a href="https://arxiv.org/abs/2609.36298">Oliver et al. (2026c)</a>.</figcaption>
+								<figcaption>Four-year spectrograms of the strain for one EMRI (with parameters M = 10<sup>6</sup> M<sub>&#9737;</sub>, m = 10 M<sub>&#9737;</sub>, a = 0.9, e<sub>f</sub> = 0.05, at redshift z = 1), but starting at two different times. Clearly, both four-year segments are basically in-band for LISA, but are qualitatively different. From <a href="https://arxiv.org/abs/2609.36298">Oliver et al. (2026c)</a>.</figcaption>
 								</div>
 							</header>
 						</article>
