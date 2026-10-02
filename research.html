@@ -8,21 +8,26 @@
 	<head>
 		<title>Research | Daniel J. Oliver</title>
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-		<meta name="description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspiral (EMRI) gravitational wave peeps." />
+		<meta name="description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspirals (EMRIs): gravitational wave peeps and post-mission EMRIs." />
 		<meta name="author" content="Daniel J. Oliver" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Research | Daniel J. Oliver" />
-		<meta property="og:description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspiral (EMRI) gravitational wave peeps." />
+		<meta property="og:description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspirals (EMRIs): gravitational wave peeps and post-mission EMRIs." />
 		<meta property="og:url" content="https://danieljoliver.com/research.html" />
 		<meta property="og:image" content="https://danieljoliver.com/images/Daniel_CherryBlossom.jpg" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Research | Daniel J. Oliver" />
-		<meta name="twitter:description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspiral (EMRI) gravitational wave peeps." />
+		<meta name="twitter:description" content="Current research: PTA anisotropic sensitivity, customized chromatic noise modeling for NANOGrav, and LISA extreme mass ratio inspirals (EMRIs): gravitational wave peeps and post-mission EMRIs." />
 		<meta name="twitter:image" content="https://danieljoliver.com/images/Daniel_CherryBlossom.jpg" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Subheadings inside a research section (e.g. LISA EMRIs); undo the template's small-print "header > h3 + p" rule */
+			#main .post header.major > h3.research-sub { margin: 3.5rem 0 1.5rem 0; }
+			#main .post header.major > h3.research-sub + p { font-size: 1rem; margin-top: 0; }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -101,13 +106,13 @@
 								PTA to anisotropic backgrounds, pulsar-by-pulsar, direction-by-direction. The
 								figure below shows an effective sensitivity skymap S<sub>eff</sub> for a simulated
 								array; the array is, as expected, most sensitive where pulsars are concentrated. The
-								formalism is described in full in <a href="https://arxiv.org/abs/2608.00250">Oliver et al. (2026)</a>,
+								formalism is described in full in <a href="https://arxiv.org/abs/2608.00250">Oliver et al. (2026b)</a>,
 								and is released as an extension to the <a href="https://github.com/Hazboun6/hasasia">hasasia</a> sensitivity package.
 								</p>
 								<!-- TODO: add S_eff equation from arXiv:2608.00250 -->
 								<div class="image main">
 									<img src="images/directional_seff_rad_large.png" alt="Radiometer effective sensitivity skymap S_eff for the 16-year SPTA">
-									<figcaption>Per-pixel radiometer effective sensitivity S<sub>eff</sub><sup>rad</sup> at the peak sensitivity frequency (<em>f</em> &asymp; 8.54 nHz) for the 16-year SPTA. Lighter regions are more sensitive; sensitivity is best where pulsars (stars) are clustered. Figure 6a from <a href="https://arxiv.org/abs/2608.00250">Oliver et al. (2026)</a>.</figcaption>
+									<figcaption>Per-pixel radiometer effective sensitivity S<sub>eff</sub><sup>rad</sup> at the peak sensitivity frequency (<em>f</em> &asymp; 8.54 nHz) for the 16-year SPTA. Lighter regions are more sensitive; sensitivity is best where pulsars (stars) are clustered. Figure 6a from <a href="https://arxiv.org/abs/2608.00250">Oliver et al. (2026b)</a>.</figcaption>
 								</div>
 							</header>
 						</article>
@@ -132,20 +137,21 @@
 							</header>
 						</article>
 
-						<!-- LISA EMRIs and the Gravitational Wave Peep -->
+						<!-- LISA EMRIs: the Gravitational Wave Peep + Post-Mission EMRIs -->
 						<article id="lisa-section" class="post featured">
 							<header class="major">
-								<h2>LISA EMRIs and the Gravitational Wave Peep</h2>
+								<h2>LISA Extreme Mass Ratio Inspirals</h2>
 								<p>
 								LISA, the planned space-based gravitational wave detector, will be sensitive between
 								roughly 10<sup>-5</sup> and 10<sup>-1</sup> Hz. A prime LISA source is the extreme
 								mass ratio inspiral (EMRI): a stellar-mass compact object (~10 M<sub>&#9737;</sub>)
 								spiraling into a massive black hole (10<sup>5</sup>&ndash;10<sup>8</sup>
-								M<sub>&#9737;</sub>) at the center of a galaxy. These orbits typically start out
-								highly eccentric and only emit detectable radiation in brief bursts as the compact
-								object swings past periapsis.
+								M<sub>&#9737;</sub>) at the center of a galaxy.
 								</p>
+								<h3 id="peep-section" class="research-sub">The Gravitational Wave Peep</h3>
 								<p>
+								EMRI orbits typically start out highly eccentric and only emit detectable radiation
+								in brief bursts as the compact object swings past periapsis.
 								Each one of these bursts is a gravitational wave <em>&ldquo;peep&rdquo;</em> &mdash;
 								firmly in the LISA band even when the long-period orbit itself is not. A single peep
 								is unlikely to be individually resolvable, but a cosmological population of them out
@@ -160,16 +166,17 @@
 									</div>
 									<div class="image" style="flex: 1 1 380px; max-width: 100%; margin: 0;">
 										<img src="images/peep_background_AE.png" alt="Stochastic background from gravitational wave peeps" style="width: 100%; display: block;">
-										<figcaption>Stochastic background from gravitational wave peeps under three different population assumptions, plotted against the LISA A and E channel sensitivity curves. From <a href="https://journals.aps.org/prd/abstract/10.1103/kgp7-ymyj">Oliver et al. (2026)</a>.</figcaption>
+										<figcaption>Stochastic background from gravitational wave peeps under three different population assumptions, plotted against the LISA A and E channel sensitivity curves. From <a href="https://journals.aps.org/prd/abstract/10.1103/kgp7-ymyj">Oliver et al. (2026a)</a>.</figcaption>
 									</div>
 								</div>
+								<h3 id="post-mission-section" class="research-sub">Post-Mission EMRIs</h3>
 								<!-- Post-mission EMRIs: both sentences are verbatim from the abstract of arXiv:2609.36298 -->
 								<p>
 								A stellar-mass compact object can radiate in the millihertz band for years to decades before it
 								plunges into its massive black hole, so a substantial fraction of the EMRIs that LISA can detect
 								will still be inspiraling when the mission ends. We find that post-mission EMRIs are roughly one in
 								four of the LISA-detectable population at &rho; &gt; 20 over the four-year mission, and roughly one
-								in six over the ten-year extended mission. (<a href="https://arxiv.org/abs/2609.36298">Oliver et al. 2026</a>)
+								in six over the ten-year extended mission. (<a href="https://arxiv.org/abs/2609.36298">Oliver et al. 2026c</a>)
 								</p>
 								<div style="margin: 2rem 0;">
 								<div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 0 0 1rem 0;">
@@ -182,7 +189,7 @@
 										<figcaption style="text-align: center;">(b) Merges at 20 years</figcaption>
 									</div>
 								</div>
-								<figcaption>Four-year spectrograms of the strain for one EMRI (with parameters M = 10<sup>6</sup> M<sub>&#9737;</sub>, m = 10 M<sub>&#9737;</sub>, a = 0.9, e<sub>f</sub> = 0.05, at redshift z = 1), but starting at two different times. In (a) one sees the waveform starting four years before plunge. In (b), it starts 20 years before plunge. Clearly, both four-year segments are basically in-band for LISA, but are qualitatively different. From <a href="https://arxiv.org/abs/2609.36298">Oliver et al. (2026)</a>.</figcaption>
+								<figcaption>Four-year spectrograms of the strain for one EMRI (with parameters M = 10<sup>6</sup> M<sub>&#9737;</sub>, m = 10 M<sub>&#9737;</sub>, a = 0.9, e<sub>f</sub> = 0.05, at redshift z = 1), but starting at two different times. In (a) one sees the waveform starting four years before plunge. In (b), it starts 20 years before plunge. Clearly, both four-year segments are basically in-band for LISA, but are qualitatively different. From <a href="https://arxiv.org/abs/2609.36298">Oliver et al. (2026c)</a>.</figcaption>
 								</div>
 							</header>
 						</article>
