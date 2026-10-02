@@ -28,6 +28,21 @@
 			#main .post header.major > h3.research-sub { font-size: 1.6rem; margin: 4.5rem 0 1.5rem 0; }
 			#main .post header.major > h4.research-sub { font-size: 1.1rem; margin: 3rem 0 1.25rem 0; }
 			#main .post header.major > .research-sub + p { font-size: 1rem; margin-top: 0; }
+			/* Text with a figure beside it (stacks on phones); the paragraph is wrapped, so restore the header paragraph look */
+			.text-fig { display: flex; align-items: center; gap: 2.5rem; margin: 0 0 2rem 0; }
+			.text-fig > p { flex: 1 1 0; margin: 0; font-style: italic; text-align: justify; }
+			.text-fig > .image { flex: 0 0 280px; margin: 0; }
+			/* Two figures side by side; flex-grow = image aspect ratio so both come out the same height */
+			.fig-pair { display: flex; align-items: flex-start; gap: 2rem; margin: 2rem 0; }
+			.fig-pair > .image { flex-basis: 0; margin: 0; }
+			.text-fig img, .fig-pair img { width: 100%; display: block; }
+			.image.main.fig-65 { width: 65%; margin: 2rem auto; }
+			@media screen and (max-width: 736px) {
+				.text-fig, .fig-pair { flex-direction: column; }
+				.text-fig > .image { flex-basis: auto; max-width: 280px; margin: 0 auto; }
+				.fig-pair > .image { flex: none; width: 100%; }
+				.image.main.fig-65 { width: 100%; }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -92,17 +107,19 @@
 						<article id="pta-section" class="post featured">
 							<header class="major">
 								<h2>Pulsar Timing Arrays</h2>
-								<!-- Second sentence verbatim from the introduction of Jacobson-Bell et al. 2026 (ApJ 1005, 58) -->
-								<p>
-								Pulsar timing arrays (PTAs) detect gravitational waves at nanohertz frequencies
-								(10<sup>-10</sup>&ndash;10<sup>-7</sup> Hz) by monitoring tiny variations in the arrival
-								times of pulses from millisecond pulsars. The NANOGrav PTA consisted of 68 MSPs at the time of the
-								15 yr data release (<a href="https://arxiv.org/abs/2306.16217">G. Agazie et al. 2023</a>), all of which were chosen for their pulse
-								shape stability, rotational stability, and/or brightness. (<a href="https://doi.org/10.3847/1538-4357/ae6db6">Jacobson-Bell et al. 2026</a>)
-								</p>
-								<div class="image main" style="max-width: 420px; margin: 2rem auto;">
-									<img src="images/msp_diagram_cromartie.png" alt="Diagram of a millisecond pulsar showing its rotation axis, magnetic field axis, radio beams, and light cylinder">
-									<figcaption>Diagram of a millisecond pulsar. Figure credit: H. Thankful Cromartie.</figcaption>
+								<div class="text-fig">
+									<!-- Second sentence verbatim from the introduction of Jacobson-Bell et al. 2026 (ApJ 1005, 58) -->
+									<p>
+									Pulsar timing arrays (PTAs) detect gravitational waves at nanohertz frequencies
+									(10<sup>-10</sup>&ndash;10<sup>-7</sup> Hz) by monitoring tiny variations in the arrival
+									times of pulses from millisecond pulsars. The NANOGrav PTA consisted of 68 MSPs at the time of the
+									15 yr data release (<a href="https://arxiv.org/abs/2306.16217">G. Agazie et al. 2023</a>), all of which were chosen for their pulse
+									shape stability, rotational stability, and/or brightness. (<a href="https://doi.org/10.3847/1538-4357/ae6db6">Jacobson-Bell et al. 2026</a>)
+									</p>
+									<div class="image">
+										<img src="images/msp_diagram_cromartie.png" alt="Diagram of a millisecond pulsar showing its rotation axis, magnetic field axis, radio beams, and light cylinder">
+										<figcaption>Diagram of a millisecond pulsar. Figure credit: H. Thankful Cromartie.</figcaption>
+									</div>
 								</div>
 
 								<h3 id="anisotropy-section" class="research-sub">Anisotropic Sensitivity</h3>
@@ -121,7 +138,7 @@
 								and is released as an extension to the <a href="https://github.com/Hazboun6/hasasia">hasasia</a> sensitivity package.
 								</p>
 								<!-- TODO: add S_eff equation from arXiv:2608.00250 -->
-								<div class="image main">
+								<div class="image main fig-65">
 									<img src="images/directional_seff_rad_large.png" alt="Radiometer effective sensitivity skymap S_eff for the 16-year SPTA">
 									<figcaption>Per-pixel radiometer effective sensitivity S<sub>eff</sub><sup>rad</sup> at the peak sensitivity frequency (<em>f</em> &asymp; 8.54 nHz) for the 16-year SPTA. Lighter regions are more sensitive; sensitivity is best where pulsars (stars) are clustered. Figure 6a from <a href="https://arxiv.org/abs/2608.00250">Oliver et al. (2026b)</a>.</figcaption>
 								</div>
@@ -140,11 +157,6 @@
 								out of 67 pulsars, finding in several cases that a previously significant achromatic noise process can be
 								partially or entirely described as chromatic. (<a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier, Oliver, et al. 2026</a>)
 								</p>
-								<!-- Caption: first two sentences of Figure 3 of Larsen, Baier, Oliver, et al. 2026, verbatim -->
-								<div class="image main">
-									<img src="images/ng15_cnm_models.jpg" alt="Bar chart of the favored customized chromatic noise model for each NANOGrav 15-yr pulsar, grouped by basis type">
-									<figcaption>The final models after the model selection process are represented in this bar chart. The pulsars are split into three columns corresponding to the favored basis type. Figure 3 from <a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier, Oliver, et al. (2026)</a>.</figcaption>
-								</div>
 								<!-- GW impacts of the CNMs: both sentences verbatim from the abstract of Agarwal et al. 2026 (arXiv:2606.28554) -->
 								<p>
 								We find increased evidence for the Hellings-Downs (HD) correlation signature
@@ -153,9 +165,16 @@
 								modes. We find this &sim;8&times; increase in Bayes factor from <a href="https://arxiv.org/abs/2306.16213">Agazie et al. (2023a)</a>
 								is a result of improved noise mitigation. (<a href="https://arxiv.org/abs/2606.28554">Agarwal et al. 2026</a>)
 								</p>
-								<div class="image main" style="max-width: 400px; margin: 2rem auto;">
-									<img src="images/ng12p5_CNM_figure10.png" alt="Customized chromatic noise model results, NANOGrav 12.5-yr dataset">
-									<figcaption>Figure 10 from <a href="https://arxiv.org/abs/2511.22597">Hazboun, Simon, Larsen, Baier, Oliver, et al. (2026)</a>: comparison of customized chromatic noise modeling (blue) against the standard noise approach at 5 (green) and 30 (red) frequencies. The chromatic models bring the recovered gravitational wave background results more in line with the common process.</figcaption>
+								<div class="fig-pair">
+									<!-- Caption: first two sentences of Figure 3 of Larsen, Baier, Oliver, et al. 2026, verbatim -->
+									<div class="image" style="flex-grow: 1.38;">
+										<img src="images/ng15_cnm_models.jpg" alt="Bar chart of the favored customized chromatic noise model for each NANOGrav 15-yr pulsar, grouped by basis type">
+										<figcaption>The final models after the model selection process are represented in this bar chart. The pulsars are split into three columns corresponding to the favored basis type. Figure 3 from <a href="https://doi.org/10.3847/1538-4357/ae677c">Larsen, Baier, Oliver, et al. (2026)</a>.</figcaption>
+									</div>
+									<div class="image" style="flex-grow: 1.01;">
+										<img src="images/ng12p5_CNM_figure10.png" alt="Customized chromatic noise model results, NANOGrav 12.5-yr dataset">
+										<figcaption>Figure 10 from <a href="https://arxiv.org/abs/2511.22597">Hazboun, Simon, Larsen, Baier, Oliver, et al. (2026)</a>: comparison of customized chromatic noise modeling (blue) against the standard noise approach at 5 (green) and 30 (red) frequencies. The chromatic models bring the recovered gravitational wave background results more in line with the common process.</figcaption>
+									</div>
 								</div>
 							</header>
 						</article>
