@@ -140,6 +140,50 @@
 
 								<!-- Text stuff -->
 																		<header>
+										<h3>The NANOGrav 15-year data set: A Limit on Continuous Spin Gravitons</h3>
+										<div class="pub-body">
+											<div class="pub-meta">
+												<p>C. Ambasht, O. Bitcon, T. Trickle, The NANOGrav Collaboration (94 authors including <strong>D. J. Oliver</strong>)</p>
+												<p>Submitted</p>
+												<p><a href="https://arxiv.org/abs/2611.14613">arXiv:2611.14613</a></p>
+												<p><a href="https://ui.adsabs.harvard.edu/abs/arXiv:2611.14613">NASA ADS</a></p>
+											</div>
+											<div class="pub-metrics">
+												<!-- Altmetric badge -->
+												<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+												<div class="altmetric-embed" data-badge-type="donut" data-arxiv-id="2611.14613"></div>
+												<!-- Citation count from Inspire-HEP -->
+												<p id="cite-count-261114613">Citations: loading…</p>
+												<script>
+												fetch("https://inspirehep.net/api/literature?q=arxiv:2611.14613")
+												.then(r => r.json())
+												.then(data => {
+												const hits = data.hits.hits;
+												const citeElement = document.getElementById("cite-count-261114613");
+												if (hits.length > 0) {
+												const citations = hits[0].metadata.citation_count || 0;
+												const litId = hits[0].id;
+												citeElement.textContent = `Citations: ${citations} (`;
+												const link = document.createElement("a");
+												link.href = `https://inspirehep.net/literature/${litId}`;
+												link.textContent = "Inspire-HEP";
+												link.target = "_blank";
+												citeElement.appendChild(link);
+												citeElement.append(")");
+												} else {
+												citeElement.textContent = "Citations: N/A";
+												}
+												})
+												.catch(() => {
+												document.getElementById("cite-count-261114613").textContent =
+												"Citations: unavailable";
+												});
+												</script>
+											</div>
+										</div>
+									</header>
+
+																		<header>
 										<h3>What Fraction of Extreme Mass Ratio Inspirals That Merge After the LISA Mission Ends Are Detectable?</h3>
 										<div class="pub-body">
 											<div class="pub-meta">
